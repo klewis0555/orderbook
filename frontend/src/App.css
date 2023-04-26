@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.container {
+  background-color: black;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-table {
+  align-self: center;
+}
+
+#orders {
+  font-family: 'Gill Sans', Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#orders td, #orders th {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+#orders tr:nth-child(even){background-color: #ffffff;}
+#orders tr:nth-child(odd){background-color: #dceafa;}
+
+#orders tr:hover {background-color: #aac4e5;}
+
+#orders th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #356e9b;
+  color: white;
+}

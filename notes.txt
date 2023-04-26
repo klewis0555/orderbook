@@ -1,0 +1,9 @@
+Initial decisions on model design:
+* price is set at a precision of 4 decimal places, shares is set at 6.
+    * any further precision with price seems extraneous, since rounding will only be done using the third and fourth decimal.
+    * similar with the decision of shares, but mostly because that's the precision for shares on Robinhood
+* total digits for price is set to 10, for shares it is set to 15.
+    * price, that allows 6 digit number plus the 4 decimals. The highest stock in history was apparently somewhere in the 400,000's, so I think 1 million is over shooting
+    * looking at the larger companies like amazon, disney, and tesla, the total shares is somewhere in the hundreds of millions to low billions. But any order taking up that much equity will legally need to be done through some other method (I believe), so I'm capping the total shares in one order at 9 digits, which is just shy of 1 billion.
+    * The total digits and precision for value is strictly based off of the calculation of price * shares.
+* the precisions and total digits are for worst case scenarios that this tool probably won't ever be used to handle. Ideally, with the input sanitation from the frontend, these restrictions won't even really be necessary.
